@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     overflow: hidden;
     background-color: azure;
 }
@@ -8,15 +8,23 @@ body{
 .parentDiv{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 20px;
   height: 100%;
   width: 100%;
 }
-
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
 .StudentCardBox{
     height: 80%;
-    width: 35%;    
+    width: 80%;    
     background-color: rgb(229, 180, 89);
     border: none;
     border-radius: 16px;
@@ -40,7 +48,8 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .custom-input-box{
-    height: 30%;
+    padding: 2%;
+    height: 50%;
     width: 60%;
     border: none;
     border-radius: 2px;
@@ -55,3 +64,84 @@ body{
     height: 100%;
     width: 80%;
 }
+.btn-align{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   width:100%;
+}
+.custom-btn {
+    position: relative;
+    top: -30%;
+    height: 2rem;
+    width: 6rem;
+    max-width: auto;
+    max-height: auto;
+    background-color: blue;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border:none;
+    cursor: pointer;
+}
+.custom-label {
+    font-size: medium;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+}
+.show-table-btn-align{
+     position: relative;
+     right: 5%;
+
+
+}
+.show-table-btn {
+    color: white;
+    font-weight: bold;
+    height: 4rem;
+    width: 3rem;
+    background-color: brown;
+    border: none;
+    cursor: pointer;
+
+    transition: 0.3s ease-in-out;
+}
+.show-table-btn:hover{
+    color: white;
+    font-weight: bold;
+    height: 2rem;
+    width: 6rem;
+    background-color: brown;
+    border: none;
+    cursor: pointer;
+}
+.tableContainer {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 900px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.custom-table-header {
+  background-color: chocolate;
+  color: white;
+  padding: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  font-family: sans-serif;
+}
+td{
+    background-color: lightgoldenrodyellow;
+}
+
