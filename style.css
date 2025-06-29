@@ -2,7 +2,7 @@ body{
     margin: 0px;
     padding: 10px;
     overflow: hidden;
-    background-color: azure;
+    background-color: lightgray;
 }
 
 .parentDiv{
@@ -44,7 +44,7 @@ body{
     transform: translateX(-60%);
 
     font-weight: 30px;
-    font-style: oblique;
+    font-style: normal;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .custom-input-box{
@@ -119,6 +119,7 @@ body{
     cursor: pointer;
 }
 .tableContainer {
+    visibility: hidden;
     position: relative;
     top: -10%;
     margin: 2rem auto;
@@ -146,4 +147,28 @@ th, td {
 td{
     background-color: white;
 }
+.edit-btn{
+    position: relative;
+    top: 5px;
+    height: 2rem;
+    width: 3rem;
+    background-color: blue;
+    border-radius: 2px;
+    font-weight: normal;
+    color: white;
+    border:none;
+    cursor: pointer;
+}
+.delete-btn{
+    position: relative;
+    top: 5px;
+    height: 2rem;
+    width: 3.5rem;
+    background-color: red;
+    border-radius: 2px;
+    font-weight: normal;
+    color: white;
+    border:none;
+    cursor: pointer;
 
+}

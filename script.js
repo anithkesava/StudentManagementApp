@@ -15,40 +15,69 @@ course.forEach((c) => {
 })
 parent.replaceChild(child_select, courseInput)
 child_select.classList.add('custom-input-box')
-
-
 const btn = document.getElementById('submitbtnId')
 let sName = document.getElementById('studentNameId')
 let sAge = document.getElementById('studentAgeId');
 let sCourseName = document.getElementById('studentCourseNameId')
 let sEmail = document.getElementById('studentEmailId')
 let students;
-
 btn.addEventListener('click', (e) => {
-    if (e.type == 'click') {
-        console.log('student name: ' + sName.value)
-        console.log('student age: ' + sAge.value)
-        console.log('student course: ' + sCourseName.value)
-        console.log('student email: ' + sEmail.value)
-    }
-    students = { studentname: sName.value, studentage: sAge.value, studentcourse: sCourseName.value, studentEmail: sEmail.value };    
-   
-    const parenttbody = document.getElementById('studentDetailstbody')
-    const childtr = document.createElement('tr');
-        
-    Object.values(students).forEach((c) => {
-        let childtd = document.createElement('td');
-        childtd.textContent = c;
-        childtr.append(childtd);
-    })
-    parenttbody.appendChild(childtr);
-    
-    
+    if (sName.value != '' && sAge.value != '' && sCourseName.value !='' && sEmail.value != '') {
+        if (e.type == 'click') {
+            console.log('student name: ' + sName.value)
+            console.log('student age: ' + sAge.value)
+            console.log('student course: ' + sCourseName.value)
+            console.log('student email: ' + sEmail.value)
+        }
+        students = { studentname: sName.value, studentage: sAge.value, studentcourse: sCourseName.value, studentEmail: sEmail.value };
+        const parenttbody = document.getElementById('studentDetailstbody')
+        const childtr = document.createElement('tr');
 
+        //edit and delete btn creation =>
+        const editbtn = document.createElement('button');
+        editbtn.textContent = 'Edit';
+        const deletebtn = document.createElement('button');
+        deletebtn.textContent = 'Delete';
+        editbtn.classList.add('edit-btn');
+        deletebtn.classList.add('delete-btn');
+
+        //loop =>
+        Object.values(students).forEach((c) => {
+            let childtd = document.createElement('td');
+            childtd.textContent = c;
+            childtr.append(childtd);
+        })
+
+        //edit and delete btn cell creation =>
+        const edittd = document.createElement('td');
+        const deletetd = document.createElement('td');
+
+        //edit and delete btn added to the cell =>
+        edittd.append(editbtn);
+        deletetd.append(deletebtn);
+
+        //edit and delete btn cell added to the row in the table =>
+        childtr.append(edittd);
+        childtr.append(deletetd);
+
+        //overall child row in the table add to table =>
+        parenttbody.appendChild(childtr);
+    } else {
+        console.log('some fields are empty')
+    }    
 })
-
- 
-
-
-
-
+const showbtn = document.getElementById('showtableId');
+let i = 0;
+showbtn.addEventListener('click', () => {
+    i++;
+    const tableContainer = document.getElementById('tableId');
+    if (i % 2 != 0) {
+        tableContainer.style.visibility = 'visible';
+        showbtn.textContent = 'Hide table'
+        showbtn.style.border = 'none';
+    } else {
+        tableContainer.style.visibility = 'hidden';
+        showbtn.textContent = 'Show table'
+        showbtn.style.border = 'none';
+    }    
+});
