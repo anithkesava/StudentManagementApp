@@ -1,0 +1,57 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: azure;
+}
+
+.parentDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.StudentCardBox{
+    height: 80%;
+    width: 35%;    
+    background-color: rgb(229, 180, 89);
+    border: none;
+    border-radius: 16px;
+}
+.inside-studentdetails-card{
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    height: 60%;
+    width: 80%;
+}
+.custom-span{
+    position: relative;
+    left: 100%;
+    transform: translateX(-60%);
+
+    font-weight: 30px;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.custom-input-box{
+    height: 30%;
+    width: 60%;
+    border: none;
+    border-radius: 2px;
+}
+.studentinput-in-a-row{
+    position: relative;
+    left: 20%;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+}
