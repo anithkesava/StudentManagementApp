@@ -5,90 +5,83 @@
   </head>
 
   <body id="bodyContainer">
-    
     <div id="parentContainer" class="parentDiv">
-        
-        <!--1 element-->
-        <form id="fromid" class="formContainer">
-            <div id="studentDetailsCard" class="StudentCardBox">
-            <div class="inside-studentdetails-card">
-                <div class="custom-span">
-                <h2>Fill Student Details</h2>
-                </div>
-                <div class="studentinput-in-a-row">
-                <label class="custom-label">StudentName</label>
-                <input
-                    id="studentNameId"
-                    class="custom-input-box"
-                    type="text"
-                    placeholder="Enter Student Name"
-                />
-                </div>
-                <div class="studentinput-in-a-row">
-                <label class="custom-label">StudentAge</label>
-                <input
-                    id="studentAgeId"
-                    class="custom-input-box"
-                    type="text"
-                    placeholder="Enter Student Age"
-                />
-                </div>
-                <div id="ParentCourseId" class="studentinput-in-a-row">
-                <label class="custom-label">Course</label>
-                <input
-                    id="coursenameId"
-                    class="custom-input-box"
-                    type="text"
-                    placeholder="Enter Course Name"
-                />
-                </div>
-                <div class="studentinput-in-a-row">
-                <label class="custom-label">Email</label>
-                <input
-                    id="studentEmailId"
-                    class="custom-input-box"
-                    type="email"
-                    placeholder="Enter Email Id"
-                />
-                </div>
+      <!--1 element-->
+      <form id="fromid" class="formContainer">
+        <div id="studentDetailsCard" class="StudentCardBox">
+          <div class="inside-studentdetails-card">
+            <div class="custom-span">
+              <h2>Fill Student Details</h2>
             </div>
-            <div class="btn-align">
-                <button id="submitbtnId" class="custom-btn" type="button">
-                Submit
-                </button>
+            <div class="studentinput-in-a-row">
+              <label class="custom-label">StudentName</label>
+              <input
+                id="studentNameId"
+                class="custom-input-box"
+                type="text"
+                placeholder="Enter Student Name"
+              />
             </div>
+            <div class="studentinput-in-a-row">
+              <label class="custom-label">StudentAge</label>
+              <input
+                id="studentAgeId"
+                class="custom-input-box"
+                type="text"
+                placeholder="Enter Student Age"
+              />
             </div>
-        </form>
-
-        <!-- 2 element -->
-        <div id="showtableParentContainer" class="show-table-btn-align">
-          <button id="showtableId" class="show-table-btn">Show table</button>
+            <div id="ParentCourseId" class="studentinput-in-a-row">
+              <label class="custom-label">Course</label>
+              <input
+                id="coursenameId"
+                class="custom-input-box"
+                type="text"
+                placeholder="Enter Course Name"
+              />
+            </div>
+            <div class="studentinput-in-a-row">
+              <label class="custom-label">Email</label>
+              <input
+                id="studentEmailId"
+                class="custom-input-box"
+                type="email"
+                placeholder="Enter Email Id"
+              />
+            </div>
+          </div>
+          <div class="btn-align">
+            <button id="submitbtnId" class="custom-btn" type="button">
+              Submit
+            </button>
+          </div>
         </div>
+      </form>
 
-        <!-- 3 element -->
-       <div id="tableId" class="tableContainer">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="custom-table-header">StudentName</th>
-                        <th class="custom-table-header">StudentAge</th>
-                        <th class="custom-table-header">CourseName</th>
-                        <th class="custom-table-header">StudentEmailId</th>
-                        <th class="custom-table-header">Edit</th>
-                        <th class="custom-table-header">Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="studentDetailstbody">                
-                </tbody>
-            </table>
-       </div>
+      <!-- 2 element -->
+      <div id="showtableParentContainer" class="show-table-btn-align">
+        <button id="showtableId" class="show-table-btn">Show table</button>
+      </div>
 
-
-    </div> <!--parentContainer-->
-    
-   
-    
+      <!-- 3 element -->
+      <div id="tableId" class="tableContainer">
+        <table>
+          <thead>
+            <tr>
+              <th class="custom-table-header">StudentName</th>
+              <th class="custom-table-header">StudentAge</th>
+              <th class="custom-table-header">CourseName</th>
+              <th class="custom-table-header">StudentEmailId</th>
+              <th class="custom-table-header">Edit</th>
+              <th class="custom-table-header">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="studentDetailstbody">
+            <!--js code will handle this area-->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--parentContainer-->
   </body>
-
-
 </html>

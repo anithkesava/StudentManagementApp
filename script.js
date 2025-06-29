@@ -21,6 +21,7 @@ let sAge = document.getElementById('studentAgeId');
 let sCourseName = document.getElementById('studentCourseNameId')
 let sEmail = document.getElementById('studentEmailId')
 let students;
+let deletebtn;
 btn.addEventListener('click', (e) => {
     if (sName.value != '' && sAge.value != '' && sCourseName.value !='' && sEmail.value != '') {
         if (e.type == 'click') {
@@ -36,8 +37,12 @@ btn.addEventListener('click', (e) => {
         //edit and delete btn creation =>
         const editbtn = document.createElement('button');
         editbtn.textContent = 'Edit';
-        const deletebtn = document.createElement('button');
+        editbtn.id = 'editbtnId';
+
+        deletebtn = document.createElement('button');
         deletebtn.textContent = 'Delete';
+        deletebtn.id = 'deletebtnId';
+
         editbtn.classList.add('edit-btn');
         deletebtn.classList.add('delete-btn');
 
@@ -58,14 +63,35 @@ btn.addEventListener('click', (e) => {
 
         //edit and delete btn cell added to the row in the table =>
         childtr.append(edittd);
-        childtr.append(deletetd);
+        childtr.append(deletetd);       
 
         //overall child row in the table add to table =>
         parenttbody.appendChild(childtr);
+        
+        //delete btn function =>
+        deletebtn.addEventListener('click', () => {
+        console.log('whether this will execute automatically')
+        parenttbody.removeChild(childtr);        
+        })
+        
+        //edit btn function =>
+        editbtn.addEventListener('click', () => {
+            console.log('edit button clicked')
+            const editbtnrow = editbtn.closest('tr'); //************* need to explore this line ***********************
+            const cells = editbtnrow.querySelectorAll('td');
+
+            document.getElementById('studentNameId').value = cells[0].textContent;
+            document.getElementById('studentAgeId').value =  cells[1].textContent;
+            document.getElementById('studentCourseNameId').value = cells[2].textContent;
+            document.getElementById('studentEmailId').value = cells[3].textContent;  
+            
+        })
+        
     } else {
         console.log('some fields are empty')
     }    
 })
+
 const showbtn = document.getElementById('showtableId');
 let i = 0;
 showbtn.addEventListener('click', () => {
