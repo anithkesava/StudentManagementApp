@@ -119,9 +119,11 @@ body{
     cursor: pointer;
 }
 .tableContainer {
-  margin: 2rem auto;
-  width: 90%;
-  max-width: 900px;
+    position: relative;
+    top: -10%;
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 900px;
 }
 
 table {
@@ -142,6 +144,6 @@ th, td {
   font-family: sans-serif;
 }
 td{
-    background-color: lightgoldenrodyellow;
+    background-color: white;
 }
 

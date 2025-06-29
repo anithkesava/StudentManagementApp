@@ -31,10 +31,24 @@ btn.addEventListener('click', (e) => {
         console.log('student course: ' + sCourseName.value)
         console.log('student email: ' + sEmail.value)
     }
-    students = { studentname: sName.value, studentage: sAge.value, studentcourse: sCourseName.value, studentEmail: sEmail.value };
+    students = { studentname: sName.value, studentage: sAge.value, studentcourse: sCourseName.value, studentEmail: sEmail.value };    
+   
+    const parenttbody = document.getElementById('studentDetailstbody')
+    const childtr = document.createElement('tr');
+        
+    Object.values(students).forEach((c) => {
+        let childtd = document.createElement('td');
+        childtd.textContent = c;
+        childtr.append(childtd);
+    })
+    parenttbody.appendChild(childtr);
     
+    
+
 })
 
-//table content: 
-//
+ 
+
+
+
 
