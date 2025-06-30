@@ -147,4 +147,22 @@ searchBox.addEventListener('input', () => {
     })
 })
 
+let ball = document.getElementById('theme-innerbtn');
+// ball.classList.add('fa-solid fa-moon')
+let outer = document.getElementById('theme-outerbtn');
+let sun = document.getElementById('suniconId');
+ball.addEventListener('click', () => {
+    ball.classList.toggle('active')
+    outer.classList.toggle('active')
+    sun.classList.toggle('active')   
+    if (sun.classList.contains('fa-sun'))
+    {
+        sun.classList.add('fa-moon')
+        sun.classList.remove('fa-sun')
+    } else {
+        sun.classList.remove('fa-moon')
+        sun.classList.add('fa-sun')
+    }
+});
+
 
