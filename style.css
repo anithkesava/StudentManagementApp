@@ -4,7 +4,6 @@ body{
     overflow: hidden;
     background-color: lightgray;
 }
-
 .parentDiv{
   display: flex;
   flex-direction: row;
@@ -20,7 +19,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 50%;
 }
 .StudentCardBox{
     height: 80%;
@@ -42,7 +41,6 @@ body{
     position: relative;
     left: 100%;
     transform: translateX(-60%);
-
     font-weight: 30px;
     font-style: normal;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -95,8 +93,6 @@ body{
 .show-table-btn-align{
      position: relative;
      right: 5%;
-
-
 }
 .show-table-btn {
     color: white;
@@ -106,7 +102,6 @@ body{
     background-color: brown;
     border: none;
     cursor: pointer;
-
     transition: 0.3s ease-in-out;
 }
 .show-table-btn:hover{
@@ -118,27 +113,16 @@ body{
     border: none;
     cursor: pointer;
 }
-.tableContainer {
-    visibility: hidden;
-    position: relative;
-    top: -10%;
-    margin: 2rem auto;
-    width: 90%;
-    max-width: 900px;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
   text-align: center;
 }
-
 .custom-table-header {
   background-color: chocolate;
   color: white;
   padding: 1rem;
 }
-
 th, td {
   border: 1px solid #ccc;
   padding: 0.75rem;
@@ -170,5 +154,43 @@ td{
     color: white;
     border:none;
     cursor: pointer;
-
+}
+.searchBoxContainer{
+    position: relative;
+    top: 20px;
+    right: -50%;
+    display: grid;
+    grid-template-columns: repeat(2, 2rem);
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width:4rem;
+    transition: 0.5s ease-in-out;
+}
+.searchBoxContainer:hover{
+    transform: scale(1.08);
+}
+.searchbox{
+    height: 2rem;
+    width: 18rem;
+    padding: 2px;
+    padding-left: 30px;
+    border:none;
+    transition: 0.5s ease-in-out;
+}
+.searchicon{
+    position: relative;
+    left: 40px;
+    font-weight: bold;
+    color: solid gray;
+}
+.tableContainer {
+    position: relative;
+    top: -10%;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 800px;
+}
+.input-table-combo{
+    display: block;
 }

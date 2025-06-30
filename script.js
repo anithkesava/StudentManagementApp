@@ -23,6 +23,7 @@ let sCourseName = document.getElementById('studentCourseNameId')
 let sEmail = document.getElementById('studentEmailId')
 let students;
 let deletebtn;
+let childtr;
 //here we declare a reset function() =>
 function resetFunction() {
     document.getElementById('studentNameId').value = '';
@@ -42,7 +43,9 @@ btn.addEventListener('click', (e) => {
             }
             students = { studentname: sName.value, studentage: sAge.value, studentcourse: sCourseName.value, studentEmail: sEmail.value };
             const parenttbody = document.getElementById('studentDetailstbody')
-            const childtr = document.createElement('tr');
+            //table row creation
+            childtr = document.createElement('tr');
+            childtr.id = 'childtrId'
             //edit and delete btn creation =>
             const editbtn = document.createElement('button');
             editbtn.textContent = 'Edit';
@@ -120,14 +123,28 @@ const showbtn = document.getElementById('showtableId');
 let i = 0;
 showbtn.addEventListener('click', () => {
     i++;
-    const tableContainer = document.getElementById('tableId');
+    const inputtable = document.getElementById('inputtableId');
+    
     if (i % 2 != 0) {
-        tableContainer.style.visibility = 'visible';
+        inputtable.style.display = 'block'
         showbtn.textContent = 'Hide table'
         showbtn.style.border = 'none';
     } else {
-        tableContainer.style.visibility = 'hidden';
+        inputtable.style.display = 'none'
         showbtn.textContent = 'Show table'
         showbtn.style.border = 'none';
-    }    
+    } 
+    
 });
+
+let searchBox = document.getElementById('searchinputboxId');
+searchBox.addEventListener('input', () => {
+    let inputvalue = searchBox.value.toLowerCase();
+    let rows = document.querySelectorAll('#studentDetailstbody tr')
+    rows.forEach((row) => {
+        let rowText = row.textContent.toLowerCase();
+        row.style.display = rowText.includes(inputvalue) ? '' : 'none'
+    })
+})
+
+
