@@ -3,6 +3,7 @@ body{
     padding: 0;
     overflow: hidden;
     background-color: lightgrey;
+    width: 100%;
 }
 @media (max-width: 768px)
 {
@@ -53,6 +54,11 @@ body{
     font-weight: bold;
     color: wheat;
     font-size: 30px;
+}
+@media (max-width: 768px){
+    .menu-span{
+        font-size: 24px;
+    }
 }
 
 .parentDiv{
