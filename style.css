@@ -5,10 +5,12 @@ body{
     background-color: lightgrey;
 }
 .dark-mode{
-   background-color: darkgray;  
+   background-color: darkslategrey;  
    color: #f0f0f0;
+
+   transition: 0.5s ease-in-out;
 }
-.dark-mode .btn {
+.dark-mode button {
   background-color: #333;
   color: white;
 }
@@ -122,6 +124,7 @@ body{
     font-weight: bold;
     border:none;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 .custom-label {
     font-size: medium;
@@ -132,6 +135,9 @@ body{
 .show-table-btn-align{
      position: relative;
      right: 5%;
+}
+button:hover{
+    transform: scale(1.05);
 }
 .show-table-btn {
     color: white;
@@ -148,7 +154,6 @@ body{
     font-weight: bold;
     height: 2rem;
     width: 6rem;
-    background-color: brown;
     border: none;
     cursor: pointer;
 }
@@ -181,6 +186,7 @@ td{
     color: white;
     border:none;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 }
 .delete-btn{
     position: relative;
@@ -193,6 +199,8 @@ td{
     color: white;
     border:none;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
+    
 }
 .searchBoxContainer{
     position: relative;
@@ -269,6 +277,9 @@ td{
 .sun-icon.active{
     color: white;
 }
-
+.theme-animation{
+    position: relative;
+    left: 10%;
+}
 
    
