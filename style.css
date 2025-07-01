@@ -67,6 +67,7 @@ body{
     .formContainer{
         flex-direction: column;
         align-items: stretch;
+        max-height: 80%;
     }
 }
 .StudentCardBox{
