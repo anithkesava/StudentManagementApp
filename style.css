@@ -258,6 +258,12 @@ td{
 .input-table-combo{
     display: none;
 }
+@media (max-width: 1080px){
+    .input-table-combo{
+        height: 80%;
+        width: 60%;
+    }
+}
 .btn-outer-layer{
     position: relative;
     height: 2rem;
