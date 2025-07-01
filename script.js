@@ -1,3 +1,5 @@
+console.log(window.screen.width+' x '+window.screen.height)
+
 const parent = document.getElementById('ParentCourseId');
 const courseInput = document.getElementById('coursenameId');
 const child_select = document.createElement('select');
