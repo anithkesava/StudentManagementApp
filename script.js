@@ -148,10 +148,10 @@ searchBox.addEventListener('input', () => {
 })
 
 let ball = document.getElementById('theme-innerbtn');
-// ball.classList.add('fa-solid fa-moon')
 let outer = document.getElementById('theme-outerbtn');
 let sun = document.getElementById('suniconId');
 ball.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode')
     ball.classList.toggle('active')
     outer.classList.toggle('active')
     sun.classList.toggle('active')   
