@@ -1,8 +1,14 @@
 body{
     margin: 0px;
     padding: 0px;
-    overflow: auto;
+    overflow: hidden;
     background-color: lightgrey;
+}
+@media (max-width: 768px)
+{
+    body{
+        overflow: auto;
+    }
 }
 
 .dark-mode{
@@ -29,7 +35,7 @@ body{
 .nav-container{
     position: relative;  
     height: 10%;
-    width: 100%;
+    width: 100vw;
     background-color: chocolate;
 }
 .menu-bar{
