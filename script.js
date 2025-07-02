@@ -1,4 +1,6 @@
-console.log(window.screen.width+' x '+window.screen.height)
+//lets start learning one by one. --started from here =>
+
+console.log(window.screen.width + ' x ' + window.screen.height)
 //note realme mobile width: 1080px;
 const parent = document.getElementById('ParentCourseId');
 const courseInput = document.getElementById('coursenameId');
@@ -17,6 +19,7 @@ course.forEach((c) => {
     child_select.appendChild(child_option);
 })
 parent.replaceChild(child_select, courseInput)
+/* so far covered */
 child_select.classList.add('custom-input-box')
 const btn = document.getElementById('submitbtnId')
 let sName = document.getElementById('studentNameId')
@@ -57,6 +60,7 @@ btn.addEventListener('click', (e) => {
             deletebtn.id = 'deletebtnId';
             editbtn.classList.add('edit-btn');
             deletebtn.classList.add('delete-btn');
+
             //loop =>
             Object.values(students).forEach((c) => {
                 let childtd = document.createElement('td');
@@ -83,6 +87,7 @@ btn.addEventListener('click', (e) => {
                 /*  *********************************************************************************************************  */
                 resetFunction();
             })
+            /* so far covered */ 
             //edit btn function =>
             editbtn.addEventListener('click', () => {
                 console.log('edit button clicked')
@@ -152,11 +157,14 @@ searchBox.addEventListener('input', () => {
 let ball = document.getElementById('theme-innerbtn');
 let outer = document.getElementById('theme-outerbtn');
 let sun = document.getElementById('suniconId');
+let card = document.getElementById('studentDetailsCard');
 ball.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode')
     ball.classList.toggle('active')
     outer.classList.toggle('active')
-    sun.classList.toggle('active')   
+    sun.classList.toggle('active') 
+    card.classList.toggle('active')
+    //need to change the form color. 
     if (sun.classList.contains('fa-sun'))
     {
         sun.classList.add('fa-moon')
